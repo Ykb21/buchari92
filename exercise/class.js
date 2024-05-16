@@ -1,18 +1,21 @@
 // template object
-
 class Student {
-    name = ""
-    #age =""
-    city= ""
+    name
+    #age
+    city
 
-    constructor(nama , umur, kota) {
+    constructor(nama, umur, kota) {
         this.name = nama
-        this.age = umur
+        this.#age = umur
         this.city = kota
     }
 
+    static welcome() {
+        return `Hello world`
+    }
+
     greeting() {
-        return `hello ${this.name}`
+        return `Hello ${this.name}`
     }
 
     getAge() {
@@ -20,8 +23,12 @@ class Student {
     }
 }
 
-const student1 = new Student("yakub", 31, "pekanbaru")
-const student2 =new Student("budi", 21, "dumai")
+const student1 = new Student("Andi", 25, "Jakarta")
+const student2 = new Student("Budi", 26, "Bandung")
+const student3 = new Student("Caca", 27, "Batam")
 
 console.log(student1.getAge())
 console.log(student2.greeting())
+
+console.log(Student.welcome())
+console.log(Date.now()) // static method
