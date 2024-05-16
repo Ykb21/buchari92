@@ -1,24 +1,41 @@
-let person = {
-    name: 'frangky',
-    age: 26,
-    address: {
-        city: 'pekanbaru',
-        country: 'indonesia'
+const car = {
+    brand: "BMW",
+    model: "M135i xDrive",
+    price: 800000000
+}
+
+let user = {
+    name: "David",
+    greet() {
+        console.log('Hello')
     }
 }
 
-person.hobby ="coding" //add Object
-person.name = "jhon" // update (cara menambah object)
-delete person //cara menghapus object
+// console.log(user.name)
+// console.log(user['name'])
 
-// console.log(person.address)
+let person = {
+    name: 'Frangky',
+    age: 26,
+    address: {
+        city: 'Jakarta',
+        country: 'Indonesia'
+    }
+}
+
+person.hobby = 'Coding' // add object
+person.name = 'John' // update object
+delete person.age // delete object
+
+
+// console.log(person.address?.city) // optional
 
 // console.log(Object.keys(person))
 
 for (let key in person) {
-    console.log(key)
-    console.log(person[key])
+    console.log(key) // key
+    console.log(person[key]) // value
 }
 
-let selector = 'name'  // selector untuk mencari object
+let selector = 'address'
 console.log(person[selector])
